@@ -1,0 +1,120 @@
+\makeatletter
+\let\@starttocorig\@starttoc
+\makeatother
+
+\documentclass[oneside,20pt,fleqn,extrafontsizes]{memoir}
+
+%%% color definition names: xcolor
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\definecolor{red(ryb)}{rgb}{1.0, 0.15, 0.07}
+\definecolor{wocrit}{rgb}{0.75, 0.25, 0.0}
+
+%%% Import other packages%
+\usepackage{usepkg}
+
+%% import moodded thing
+\usepackage{localF}
+
+%%%%%%%%%%%%%%%%%% refname, titletoc, titlesec setting
+\usepackage{titleT-ref}%toc depth
+
+%%%%%%%%%%%% Hyperref package
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%Geometry package
+\usepackage{mygeometry}
+%%%%%%%
+\usepackage{fancypkg}%%%import fancy package with memoir correction
+
+%%%%%%%%%%%%%%%%%% setlength
+\usepackage{mylength}
+\linespread{0.5}
+
+%%%%%%% META
+\title{Coscienza delle POSSIBILIT\'A, reificazione della MEMORIA, ricerca OBIETTIVO}
+
+%%import makeidx
+%\usepackage{makeidx}
+
+%%% COUNTERS
+\setsecnumdepth{subsection}
+\setcounter{tocdepth}{-1}       % chapter
+\newcounter{cherrychapter}%[chapte]
+\setcounter{cherrychapter}{1}
+\newcounter{partworkouts}%[chapte]
+\setcounter{partworkouts}{1}
+
+%%%% iimport functions
+\usepackage{functions}
+
+
+%%%%%%%%%%%%%%%%%%%% MULTINDExssss (number of chapters)
+%\makeindex[1]%biasmomentumoggi]%chapters
+%\makeindex[2]%meditazione]
+%\makeindex[3]%nitidezza]
+%\makeindex[4]%teatro]
+
+\begin{document}%BEGIN
+
+\pagestyle{mystyle}%% mystyle defined in usepkg
+
+
+\renewcommand*{\contentsname}{\hypertarget{toc}{Table of Contents}}%%\printcontents without head/hypereff
+%\makeatletter
+%\renewcommand*{\@tocmaketitle}{\hypertarget{toc}{Table of Contents}}
+%\makeatother
+
+In workoutdescrizione
+{\let\clearpage\relax
+\today
+part{Tempo essere me concretezza progetto: metodo.}
+}
+input{abituarsi}
+
+\phantomsection
+\tableofcontents*
+
+{%
+%\renewcommand{\part}[1]{\centering(\thepart)-\Large#1}%
+\let\clearpage\relax%
+\maketitle%
+part{cogito pre riflessivo: me}%
+}%
+input{meconcretezza}
+
+
+%%streampresent promemoria di promemoria
+part{strumenti per galleggiare e soddisfare bisogni}
+PartialTocbpart
+input{workoutme}
+
+%%
+%%streampresent promemoria di promemoria
+part{streampresent promemoria di promemoria: keep disorder here.}
+PartialTocbpart
+input{streampresent}
+
+ddailyiary separato-
+part{DDailyiary}
+listofkeywords
+input{DDailyiary}
+\clearpage
+
+\part{Rappels(legacy)}
+\PartialTocbpart
+\input{rappels}
+
+\clearpage
+
+\stopcontents[chapters]
+\end{document}

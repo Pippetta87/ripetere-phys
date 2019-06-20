@@ -1,0 +1,32 @@
+\ProvidesPackage{titleT-ref}
+
+\usepackage{titletoc}
+\setcounter{tocdepth}{1}
+
+\usepackage[compact,toctitles]{titlesec}
+\titleclass{\part}{top}
+
+\titleformat{\part}[block]{\huge\bfseries\centering}{\thepart}{10pt}{\huge}[
+%\vspace*{\fill}
+\thispagestyle{mystyle} \addtocounter{partworkouts}{1}
+]
+
+\titleformat{\chapter}[block]
+{\huge}{\chaptertitlename\ \thechapter:\ }{0pt}{\huge}[
+\addtocounter{cherrychapter}{1}
+\thispagestyle{mystyle}
+]%\headinginfo{\currentname}
+
+\titleformat{\section}{\LARGE}{}{0pt}{\LARGE}[
+\headinginfo{\currentname}
+]
+
+\titleformat{\subsection}[display]{\large}{}{0pt}{\large\scshape}[
+\centering\headinginfo{\currentname}
+]
+
+\titlespacing*{\part}{0pt}{0pt}{0pt}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}

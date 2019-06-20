@@ -1,0 +1,38 @@
+\ProvidesPackage{functions}
+
+\newcommand{\currenth}{%
+  \ifnum\value{chapter}=0
+    -1%part
+  \else
+    \ifnum\value{section}=0
+      0%chapter
+    \else
+    1%section
+    \fi
+  \fi
+}%
+
+
+\newcommand{\PartialTocbpart}{
+\vspace*{1pc}\hrule\vspace*{0.5pc}% toc at beginning chapter
+\startcontents[part]\vbox{\Large 
+\hypertarget{outline\thepart}{\noindent Outline BRACCIO \thepart}}
+\printcontents[part]{}{0}{\setcounter{tocdepth}{0}}\vspace*{0.5pc}\hrule
+%\lfoot{\begingroup
+%\hypersetup{allcolors=blue}
+%Toc.\hyperlink{outline\thechapter}{\thechapter}.\hyperlink{outline\thechapter}{\thechapter} Pg: \thepage (\thepart)ch.\thechapterSec.
+%\thesection,\hyperlink{toc}{Main Toc}\endgroup
+%}
+}
+
+\newcommand{\PartialToc}{
+\vspace*{1pc}\hrule\vspace*{0.5pc}% toc at beginning chapter
+\startcontents[chapters]\vbox{\Large 
+\hypertarget{outline\thechapter}{\noindent Outline Cap. \thechapter}}
+\printcontents[chapters]{}{1}{\setcounter{tocdepth}{3}}\vspace*{0.5pc}\hrule
+%\lfoot{\begingroup
+%\hypersetup{allcolors=blue}
+%Toc.\hyperlink{outline\thepart}{\thepart}.\hyperlink{outline\thechapter}{\thechapter} %Pg: \thepage (\thepart)ch.\thechapter-Sec.
+%\thesection,\hyperlink{toc}{Main Toc}\endgroup
+%}
+}
