@@ -1,19 +1,79 @@
+\section{Ordini di grandezza}
+
+\subsection{Misure adimensionali interazioni}
+
+Potenziale tra 2 nucleoni $-Gm_H^2/r$ con $r=\frac{h}{2\pi m_Hc}$ (Pindet): in unit\'a $m_Hc^2$ $\alpha_G=\frac{2\pi Gm_H^2}{hc}\approx\num{e-39}$.
+
+$\alpha_{SF}=\frac{e^2}{(4\pi\epsilon_0)\hbar c}$.
+
+The ratio of three characteristic lengths:
+
+the classical electron radius $r_e=(\frac{1}{4\pi\epsilon_0})\frac{e^2}{m_ec^2}$, the Bohr radius $a_0=(4\pi\epsilon_0)\frac{\hbar^2}{m_ee^2}$  and the Compton wavelength of the electron $\lambdabar_e=\frac{\hbar}{m_ec}$:
+
+$r_e=\frac{\alpha\lambda_e}{2\pi}=\alpha^2a_0$.
+
+$e^2=1.44\,MeV\,fm$
+
+TODO: pressure ionizzation and electron degeneracy (why eos for H,He)
+
+\subsection{Massa minima innesco fusione H}
+
+Temperatura minima per innesco idrogeno: $T_{min}\approx\SI{1.5e6}{\kelvin}$
+\begin{align*}
+
+&P_c=K_{NR}n_e\expy{5/3}+n_ikT_c=K_{NR}[\frac{\rho_c}{m_H}]\expy{5/3}+\frac{\rho_c}{m_H}kT_c\\
+&kT_c=A\rho_c\expy{1/3}-B\rho_c\expy{2/3}\\
+&kT_{c,max}\propto G^2\frac{m_H\expy{8/3}}{K_{NR}}M\expy{4/3}
+\end{align*}
+
+\subsection{Massa massima}
+
+\begin{align*}
+&P=P_i+P_e+P_R=\frac{\rho_c}{\mu m_H}kT_c+\frac{1}{3}aT_c^4\\
+&P_g=\beta P_c\quad P_R=(1-\beta)P_c
+\end{align*}
+
+\subsection{Struttura stellare approssimata}
+
+\begin{itemize}
+\item \keyword{Approssimazione zero per $M_r(0)$ e $M_r(R)$}:
+Al centro della stella $\TDy{r}{P}=-\frac{GM_r}{r^2}\rho\approx-\frac{4\pi}{3}r^3\rho_c\frac{G}{r^2}\rho_c\approx-\frac{4\pi}{3}rG\rho_c^2$, vicino alla superficie $\TDy{r}{P}\approx-G\frac{M\rho}{r^2}$: se la composizione chimica \'e costante
+\begin{align*}
+&\TDy{r}{P}\approx-\frac{4\pi}{3}G\rho_c^2r\exp{-r^2/a^2}\\
+&P(r)\approx-\frac{2\pi}{3}G\rho_c^2a^2[\exp{-r^2/a^2}-\exp{-R^2/a^2}]
+\end{align*}
+
+$4\pi\rho r^2dr=dm$ ci permette di riscrivere equilibrio idrostatico $GM_rdM_r=-4\pir^4dP$:
+\begin{align*}
+&\frac{1}{2}GM_r^2=-4\pi\int_0^rr'^4\TDy{r}{P}\,dr\\
+&M_r=\frac{4\pi a^3}{3}\rho_c\Phi(x)\quad x=r/a\\
+&\Phi(x)=6\int_0^xx'^5\exp{-x'^2}\,dx'\approxx^6-3/4x^8+3/10x\expy{10}+...
+\end{align*}
+per alta $\rho_x$ $a\ll R$ ...:
+\begin{align*}
+&M\approx M_r=\frac{4\pi\rho_ca^3}{3}\Phi(\frac{R}{a})\approx\frac{4\pi\rho_ca^3}{3}\sqrt{6}\\
+&P_c\approx\frac{2\pi}{3}G\rho_c^2a^2\approx[\frac{\pi}{36}]GM\expy{2/3}\rho_c\expy{4/3}
+\end{align*}
+
+\item Politropa $n=3/2$: $P_c\propto M\expy{2/3}\rho_c\expy{4/3}$
+
+\item Politropa $n=3$: $P_c\propto M\expy{2/3}\rho_c\expy{4/3}$
+
+\end{itemize}
+
+
+
 \section{From proto-star to Pre-MS}
 
 \begin{itemize}
-\item Jeans stability for molecular clouds: clouds not collapsing: thermal pressure/ interstellar magnetic field (large scale); \keyword{hydrostatic equilibrium for isothermal sphere}: (first approx for dense core/Bok globule: mechanical support from MHD waves diminish at this smaller scales)
-\begin{columns}[T]\begin{column}{0.5\textwidth}
+\item Isothermal collapse of MC.
+\item Inner region of collapsing cloud becomes denser/optically thicker (first core formation $\tau\approx\SI{1.5e7}{\year}$): role of ambipolar diffusion. Typical mass $M_*=\num{e-2}\msun{}$, $R_*=\SI{5}{\astronomicalunit}$, $\rho\approx\SI{e-10}{\gram\per\cubic\cm}$
+\item The first core of molecular hydrogen collapse as soon as T is raised enough to begins molecular dissociation (for $T>2000K$ we have collisional diss)
 \begin{align*}
-&-\frac{1}{\rho}\nabla P-\nabla \phi=0\\
-&P=\rho\frac{RT}{\mu}\\
-&\nabla^2\phi=4\pi G\rho
+&0=-\frac{1}{2}\frac{GM_*^2}{R_*}+\Delta E_{int}+L_{rad}t\\
+&L_{rad}\approx L_{acc}=\frac{\dot{M}GM_*}{R_*}\\
+&\Delta E_{int}=\frac{XM_*}{m_H}[\frac{\Delta E_{dis}(H)}{2}+\Delta E_{ion}(H)]+\frac{YM_*\Delta E_{ion}(He)}{4m_H}
+\item D ignition: $^2H+^1H\to^3He+\gamma(\SI{5.5}{\mega\ev})$, 
+\item radiative core??
 \end{align*}
-\end{column}\begin{column}{0.5\textwidth}
-$\ln{\rho}+\phi/c_s^2$ spatial constant: spherical case
-\begin{equation*}
-\rho(r)=\rho_c\Exp{-\phi/c_s^2}
-\end{equation*}
-\end{column}\end{columns} 
-Graqvitational stability using polytropes:
-\item Inner region of collapsing cloud becomes denser/optically thicker: $$
 \end{itemize}
