@@ -16,7 +16,7 @@
 
 %% import moodded thing
 \usepackage{localF}
-
+\usepackage{mathOp}
 %%%%%%%%%%%%%%%%%% refname, titletoc, titlesec setting
 \usepackage{titleT-ref}%toc depth
 
@@ -62,23 +62,40 @@
 %\makeindex[2]%meditazione]
 %\makeindex[3]%nitidezza]
 %\makeindex[4]%teatro]
-
+\setsecnumdepth{subsection}
+\settocdepth{chapter}
+ 
 \begin{document}%BEGIN
 \pagestyle{mystyle}%% mystyle defined in usepkg
-\renewcommand*{\contentsname}{\hypertarget{toc}{Table of Contents}}%%\printcontents without head/hypereff
+\renewcommand*{\contentsname}{\label{toc}{Table of Contents}}%%\printcontents without head/hypereff
 %\makeatletter
-%\renewcommand*{\@tocmaketitle}{\hypertarget{toc}{Table of Contents}}
+%\renewcommand*{\@tocmaketitle}{\label{toc}{Table of Contents}}
 %\makeatother
 \maketitle
+\startcontents[chapters]
+
+\tableofcontents
+
 \part{Fisica nucleare}
 \chapter{BB nucleosynthesis}
+\PartialToc
+
 \chapter{Catena PP e ciclo CNO}
+\PartialToc
 
-\part{Analisi statistica dati}
+\part{Fundamental interactions}\label{intfon}\label{}{}
+\input{transports}
 
-\part{Evoluzione componente solida in dischi protoplanetari}
+\part{Analisi statistica dati}\label{asd}
+\input{pdistro}
+\input{estimators}
 
-\part{Strutture all'equilibrio idrostatico}
+\part{Evoluzione componente solida in dischi protoplanetari}\label{ppd}
+\input{accretion}
+\input{gravity}
 
-%\stopcontents[chapters]
+\part{Strutture all'equilibrio idrostatico}\label{stars}
+\input{stellarevolution}
+
+\stopcontents[chapters]
 \end{document}

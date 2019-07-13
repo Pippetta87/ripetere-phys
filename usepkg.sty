@@ -1,7 +1,7 @@
 \ProvidesPackage{usepkg}
-
+\usepackage{cleveref}  
 \usepackage{xpatch}
-
+\usepackage{resizegather}
 \xpatchcmd{\chapter}{%
   \thispagestyle{chapter}}{%
     \thispagestyle{mystyle}%
@@ -51,7 +51,7 @@ Toc:(\hyperlink{outline\thepart}{\thepart})-\hyperlink{outline\thechapter}{\thec
 %\usepackage{subcaption}
 
 \usepackage{calc}
-\usepackage{xassoccnt}
+%\usepackage{xassoccnt}
 \usepackage{nameref}
 
 \usepackage{tikz}

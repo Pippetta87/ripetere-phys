@@ -1,3 +1,44 @@
+\section{Comportamento materia densit\'a temperature stellari}
+
+La presenza dello ione $Z_i$ altera la distribuzione di cariche quindi devo determinare il potenziale $\phi_i$ generato da $Z_i$ e dalla distribuzione di cariche attorno; usando la formula di Boltzmann la densit\'a delle particelle con carica Z risulta
+\begin{equation}\label{eq:Bdistroelectricpot}
+n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}
+\end{equation}
+con $\overline{n}_Z$ densit\'a numerica della particella di carica $Z$ in assenza di $Z_i$.
+
+L'equazione di Poisson per $\phi$ \'e
+\begin{equation}\label{eq:poissonscreened}
+\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)
+\end{equation}
+
+Nel regime di schermaggio debole, dove l'energia coulombiana \'e molto minore dell'energia termica $e\phi\ll KT$, espando $n_Z$ (\eqref{eq:Bdistroelectricpot}) al prim'ordine quindi in \eqref{eq:poissonscreened} rimane il termine lineare in $\phi$.
+
+Introduco il raggio di Debye:
+\begin{equation}
+\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
+\end{equation}
+quindi dall'equazione \eqref{eq:poissonscreened} ottengo il potenziale generato dallo ione $Z_i$ in $\vec{r}_i$ a distanza $|\vec{r}-\vec{r}_i|=r_i$ come soluzione di:
+\begin{equation}\label{eq:poissonspheric}
+\frac{r_D^2}{r_i}\TtwoDy{r_i}{(r_i\phi_i)}=\phi_i
+\end{equation}
+con
+\begin{equation}
+\phi=\sum_i\phi_i
+\end{equation}
+
+\begin{workout}[Raggio di debye e degenerazione elettronica]
+Il rapporto fra densit\'a elettronica e quella imperturbata \'e
+\begin{equation}
+\midfrac{f(\psi-\midfrac{U_e(r)}{KT})}{f(\psi)}
+\end{equation}
+dove $U_e(r)$ \'e l'energia di interazione di un elettrone
+\end{workout}
+
+La soluzione di \eqref{eq:poissonspheric} \'e
+\begin{equation}\label{eq:screenedpotential}
+\phi_i=\frac{Z_ie}{r_i}\exp{-\midfrac{r}{r_D}}
+\end{equation}
+
 \section{Ordini di grandezza}
 
 \subsection{Misure adimensionali interazioni}
@@ -20,8 +61,7 @@ TODO: pressure ionizzation and electron degeneracy (why eos for H,He)
 
 Temperatura minima per innesco idrogeno: $T_{min}\approx\SI{1.5e6}{\kelvin}$
 \begin{align*}
-
-&P_c=K_{NR}n_e\expy{5/3}+n_ikT_c=K_{NR}[\frac{\rho_c}{m_H}]\expy{5/3}+\frac{\rho_c}{m_H}kT_c\\
+&P_c=K_{NR}n_e\expy{5/3}+n_ikT_c=K_{NR}\frac{\rho_c}{m_H}]\expy{5/3}+\frac{\rho_c}{m_H}kT_c\\
 &kT_c=A\rho_c\expy{1/3}-B\rho_c\expy{2/3}\\
 &kT_{c,max}\propto G^2\frac{m_H\expy{8/3}}{K_{NR}}M\expy{4/3}
 \end{align*}
@@ -43,11 +83,11 @@ Al centro della stella $\TDy{r}{P}=-\frac{GM_r}{r^2}\rho\approx-\frac{4\pi}{3}r^
 &P(r)\approx-\frac{2\pi}{3}G\rho_c^2a^2[\exp{-r^2/a^2}-\exp{-R^2/a^2}]
 \end{align*}
 
-$4\pi\rho r^2dr=dm$ ci permette di riscrivere equilibrio idrostatico $GM_rdM_r=-4\pir^4dP$:
+$4\pi\rho r^2dr=dm$ ci permette di riscrivere equilibrio idrostatico $GM_rdM_r=-4\pi r^4dP$:
 \begin{align*}
 &\frac{1}{2}GM_r^2=-4\pi\int_0^rr'^4\TDy{r}{P}\,dr\\
 &M_r=\frac{4\pi a^3}{3}\rho_c\Phi(x)\quad x=r/a\\
-&\Phi(x)=6\int_0^xx'^5\exp{-x'^2}\,dx'\approxx^6-3/4x^8+3/10x\expy{10}+...
+&\Phi(x)=6\int_0^xx'^5\exp{-x'^2}\,dx'\approx x^6-3/4x^8+3/10x\expy{10}+...
 \end{align*}
 per alta $\rho_x$ $a\ll R$ ...:
 \begin{align*}
@@ -61,19 +101,47 @@ per alta $\rho_x$ $a\ll R$ ...:
 
 \end{itemize}
 
-
-
 \section{From proto-star to Pre-MS}
 
 \begin{itemize}
-\item Isothermal collapse of MC.
-\item Inner region of collapsing cloud becomes denser/optically thicker (first core formation $\tau\approx\SI{1.5e7}{\year}$): role of ambipolar diffusion. Typical mass $M_*=\num{e-2}\msun{}$, $R_*=\SI{5}{\astronomicalunit}$, $\rho\approx\SI{e-10}{\gram\per\cubic\cm}$
+\item Isothermal collapse of MC. MC build up as gas flow into arm's potential well
+\item Virial theorem
+\begin{align*}
+&\rho\TDy{t}{\vec{u}}=-\nabla P-\rho\nabla\phi+\frac{1}{c}\vecp{j}{B}\\
+&\rho\TDy{t}{\vec{u}}=-\nabla P-\rho\nabla\phi+\frac{1}{4\pi}(\scap{B}{\nabla})\vec{B}-\frac{1}{8\pi}\nabla|B|^2
+&\frac{1}{2}\PtwoDy{t}{I}=2T+2U+W+M\\
+&I=\int \rho|r|^2\,d^3x,\ T=\frac{1}{2}\int\rho|\vec{u}|^2\,d^3x,\ U=\frac{3}{2}\int nKT\,d^3x=\frac{3}{2}\int P\,d^3x\\
+&W=\frac{1}{2}\int\rho\phi\,d^3x\ M=\frac{1}{8\pi}\int|B|^2\,d^3x
+\end{align*}
+No evidence for collapse of giant complexes: $2T+2U+W+M$.
+\begin{align*}
+&\frac{T}{|W|}\approx\frac{1}{2};\Delta V^2\invers{(\frac{GM^2}{R})}
+&=0.5(\frac{\Delta V}{\SI{4}{\kilo\meter\per\second}})^2(\frac{M}{10^5\msun{}})\expy{-1}(\frac{R}{\SI{25}{\parsec}})\\
+&\Delta V\approx\sqrt{\frac{GM}{R}}=V_{vir},\ t_{ff}\approx\sqrt{\frac{R^3}{GM}}
+\end{align*}
+
+Small clumps moving moving in gravitational field of whole ensamble.
+\item Denser regions with point IR source. Inner region of collapsing cloud becomes denser/optically thicker (first core formation $\tau\approx\SI{1.5e7}{\year}$): role of ambipolar diffusion. Typical mass $M_*=\num{e-2}\msun{}$, $R_*=\SI{5}{\astronomicalunit}$, $\rho\approx\SI{e-10}{\gram\per\cubic\cm}$
 \item The first core of molecular hydrogen collapse as soon as T is raised enough to begins molecular dissociation (for $T>2000K$ we have collisional diss)
 \begin{align*}
 &0=-\frac{1}{2}\frac{GM_*^2}{R_*}+\Delta E_{int}+L_{rad}t\\
 &L_{rad}\approx L_{acc}=\frac{\dot{M}GM_*}{R_*}\\
 &\Delta E_{int}=\frac{XM_*}{m_H}[\frac{\Delta E_{dis}(H)}{2}+\Delta E_{ion}(H)]+\frac{YM_*\Delta E_{ion}(He)}{4m_H}
-\item D ignition: $^2H+^1H\to^3He+\gamma(\SI{5.5}{\mega\ev})$, 
-\item radiative core??
 \end{align*}
+\item Birthline
+\begin{align*}
+&\tau_{KH}=\frac{GM_*^2}{R_*L_*}\propto L_*\expy{-3/2}\\
+&\TDy{t}{R_*}\propto-\frac{R_*}{t_{KH}}\\
+&L_*=4\pi\sigma T_*^4R_*^2\\
+&\TDy{t}{L_*}\propto-\frac{L_*}{\tau_{KH}}
+&T_*\approx\const{}
+\end{align*}
+The most luminous therefore youngest object reflect its nature of accreting object within collapsing dense core: surface temperature and luminosity are set by infall (\numrange{e-5}{e-6}$\msun/yr$) dynamics (expected to change when infall end), radius by internal structure and is the same for protostar and pre-MS star; the birthline is the locus of pre-MS star with protostellar radii. At $M_*=8\msun$ the birthline intercept the ZAMS
+\item Slower accretion give radius more time to shrink but D-burning thermostat limit that. D ignition: $^2H+^1H\to^3He+\gamma(\SI{5.5}{\mega\ev})$.
+
 \end{itemize}
+
+\subsection{Pre-MS star model}
+
+\section{Sequenza principale}
+
