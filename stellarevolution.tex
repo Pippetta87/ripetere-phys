@@ -114,20 +114,26 @@ per alta $\rho_x$ $a\ll R$ ...:
 
 \begin{itemize}
 \item Isothermal collapse of MC ($t_{cool}\ll t_{ff}$, $P\propto\rho$). MC build up as gas flow into arm's potential well. massa di Jeans $M_J\propto\expy{3/2}\rho\expy{-1/2}$. $M_j$ diminuisce all'aumentare di densit\'a: frammentazione
-\item Virial theorem
-\begin{align*}
-&\rho\TDy{t}{\vec{u}}=-\nabla P-\rho\nabla\phi+\frac{1}{c}\vecp{j}{B}\\
-&\rho\TDy{t}{\vec{u}}=-\nabla P-\rho\nabla\phi+\frac{1}{4\pi}(\scap{B}{\nabla})\vec{B}-\frac{1}{8\pi}\nabla|B|^2
-&\frac{1}{2}\PtwoDy{t}{I}=2T+2U+W+M\\
-&I=\int \rho|r|^2\,d^3x,\ T=\frac{1}{2}\int\rho|\vec{u}|^2\,d^3x,\ U=\frac{3}{2}\int nKT\,d^3x=\frac{3}{2}\int P\,d^3x\\
-&W=\frac{1}{2}\int\rho\phi\,d^3x\ M=\frac{1}{8\pi}\int|B|^2\,d^3x
-\end{align*}
+\item Virial theorem.
+
+\adjm{\rho\TDy{t}{\vec{u}}=-\nabla P-\rho\nabla\phi+\frac{1}{c}\vecp{j}{B}}
+
+\adjm{\rho\TDy{t}{\vec{u}}=-\nabla P-\rho\nabla\phi+\frac{1}{4\pi}(\scap{B}{\nabla})\vec{B}-\frac{1}{8\pi}\nabla|B|^2}
+
+\adjm{\frac{1}{2}\PtwoDy{t}{I}=2T+2U+W+M}
+
+\adjm{I=\int \rho|r|^2\,d^3x,\ T=\frac{1}{2}\int\rho|\vec{u}|^2\,d^3x,\ U=\frac{3}{2}\int nKT\,d^3x=\frac{3}{2}\int P\,d^3x}
+
+\adjm{W=\frac{1}{2}\int\rho\phi\,d^3x\ M=\frac{1}{8\pi}\int|B|^2\,d^3x}
+
 No evidence for collapse of giant complexes: $2T+2U+W+M$.
-\begin{align*}
-&\frac{T}{|W|}\approx\frac{1}{2};\Delta V^2\invers{(\frac{GM^2}{R})}
-&=0.5(\frac{\Delta V}{\SI{4}{\kilo\meter\per\second}})^2(\frac{M}{10^5\msun{}})\expy{-1}(\frac{R}{\SI{25}{\parsec}})\\
-&\Delta V\approx\sqrt{\frac{GM}{R}}=V_{vir},\ t_{ff}\approx\sqrt{\frac{R^3}{GM}}
-\end{align*}
+
+\adjm{\frac{T}{|W|}\approx\frac{1}{2};\Delta V^2\invers{(\frac{GM^2}{R})}}
+
+\adjm{=0.5(\frac{\Delta V}{\SI{4}{\kilo\meter\per\second}})^2(\frac{M}{10^5\msun{}})\expy{-1}(\frac{R}{\SI{25}{\parsec}})}
+
+\adjm{\Delta V\approx\sqrt{\frac{GM}{R}}=V_{vir},\ t_{ff}\approx\sqrt{\frac{R^3}{GM}}}
+
 Small clumps moving moving in gravitational field of whole ensamble.
 \item Denser regions with point IR source. (Fase adiabatica $P\propto\rho\expy{\gamma}$, $T\propto\rho\expy{2/3}$ per mono-ideal gas) Inner region of collapsing cloud becomes denser/optically thicker (first core formation $\tau\approx\SI{1.5e7}{\year}$): role of ambipolar diffusion. Typical mass $M_*=\num{e-2}\msun{}$, $R_*=\SI{5}{\astronomicalunit}$, $\rho\approx\SI{e-10}{\gram\per\cubic\cm}$. Energy radiated by denser core is absorbed by free-falling gas and re-emitted in IR
 \item The first core of molecular hydrogen collapse as soon as T is raised enough to begins molecular dissociation (for $T>2000K$ we have collisional diss)
@@ -151,6 +157,14 @@ The most luminous therefore youngest object reflect its nature of accreting obje
 \end{itemize}
 
 \subsection{Pre-MS star model}
+
+\adjm{x=\frac{r}{R},\ q=\frac{M_r}{M},\ t=\frac{T}{T_0},\ p=\frac{P}{P_0},\ T_0=\frac{\mu GMm_H}{Rk},\ P_0=\frac{GM^2}{4\pi R^4}}
+Continuity: $\TDy{x}{q}=\frac{p}{t}x^2$, HE: $\TDy{x}{p}=-\frac{p}{t}\frac{q}{x^2}$, $\nad$ for fully convective star: $P=CT\expy{5/2}\to p=Et\expy{2.5}$ (C determines the adiabat).
+HayT is vertical $\TDly{T_e}{L}>10$, mild mass deps $\TDly{M}{T_e}\approx0.2$. Relaistically: surface condition+super-adibat layer.
+
+As T increses due to contraction (V.T.)a central radiative core is formed: when a sizeble radiative core formed path toward higher $T_e$ is almost horizontal.
+At temperature \SIrange{1e6}{2.5e6}{\kelvin} D/Li(Be/B) are burnt by proton capture (Li/D depletion at surface for fully convective star).
+In general larger masses have lower Li depletion, given mass increases increasing Z: \xaumenta{M}(or \xdiminuisce{Z}) lower convective zone but also earlier retreat from center
 
 \section{Sequenza principale}
 
