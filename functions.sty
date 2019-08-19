@@ -18,6 +18,7 @@
 \newcommand{\bv}{Brunt-V\"ais\"al\"a}
 
 %%%%%% CCCCCCCCCCCCCCCCCCCCCCC
+\newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
 \newcommand{\cha}{Chandrasekhar }
 \newcommand{\chapref}[2]{\chapter{#1}
 \begin{refsection}
@@ -75,9 +76,14 @@
  \newcommand{\ER}{E_{\text{RYD}}} %% E_ryd
 \newcommand{\Evar}[1]{#1'} %%% Variazione Euleriana
 \newcommand{\expy}[1]{^{#1}} %%  Esponente >1 char
+\newcommand{\insidegraffe}[1]{\{#1\}}
 
 %%% FFFFFF
 \newcommand{\midfrac}[2]{\left.{#1}\middle/{#2}\right.}
+\newcommand{\blacknu}{B_{\nu}}
+\newcommand{\fluxnu}{F_{\nu}}
+\newcommand{\intensitynu}{I_{\nu}}
+\newcommand{\opacitynu}{\kappa_{\nu}}
 
 %%%%%% GGGGGGGGGGGGGGGGGGGGGG
 
@@ -131,6 +137,8 @@
 \newcommand{\msun}{M_{\odot}} %% massa solare
 \newcommand{\Mcs}{\frac{MeV}{c^2}} %% massa solare
 \newcommand{\Mif}{M_{if}}
+\newcommand{\mearth}{M_{\oplus}} %% massa terra
+\newcommand{\mjupiter}{M_{\jupiter}} %% massa giove
 
 %%%%% NNNNNNNNNNNNNNNN
 \newcommand{\nad}{\nabla_{Ad}}
@@ -170,11 +178,13 @@
 %\startcontents[chapters]\vbox{\bf\Large Outline}
 %\printcontents[chapters]{l}{1}{\setcounter{tocdepth}{3}}\vspace*{1pc}\hrule}
 \newcommand{\plankfnu}{B_{\nu}(T)=\frac{2h}{c^2}\frac{\nu^3}{\exp{\frac{h\nu}{KT}}-1}} %%funzione di plank: intensita specifica radiazione nera frequenza nu
+\newcommand{\planckf}[1]{B_{#1}}
 
 %%%%RRRRRRRRRRRRRR
 \let\oldref\ref
 \renewcommand{\ref}[1]{(\oldref{#1})}
-
+\newcommand{\rjupiter}{R_{\jupiter}} %% raggio giove
+\newcommand{\rearth}{R_{\oplus}} %% raggio terra
 \newcommand{\rbt}[2]{$\left.\begin{array}{l}#1\\#2\\ \end{array}\right\}$} % parentesi grafa a destra 2 linee
 \newcommand{\req}[1]{~\ref{eq:#1}} %% ~\ref{eq:ref}
 \newcommand{\Ra}{$\alpha$ } %% alpha
@@ -237,8 +247,7 @@
 %\renewcommand\p@subsection{\thesection.}
 %\makeatother         										%%%%%
 
-
-
+\newcommand{\ten}[1]{\tensor{#1}{_\cdot_\cdot}}
 \newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
 \newcommand{\tool}[1]{\evt{Strumenti} #1 \begin{center}\line(1,0){250}\end{center}} %Strumenti
 \newcommand{\thalf}{t_{\frac{1}{2}}}
