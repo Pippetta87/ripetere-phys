@@ -1,21 +1,34 @@
+\documentclass[main.tex]{subfiles}
+\usepackage{tensor}
+\newcommand{\insieme}[1]{\{#1\}}
+\DeclareMathOperator{\trace}{Tr}
+\newcommand{\mvar}[1]{\Delta #1} %% delta macroscopic variation
+ \newcommand{\roT}{\omega_{\oplus}}
+\newcommand{\mblock}[1]{ {\allowbreak $#1$ }}
+\newenvironment{definition}[1]{\textbf{Def.: #1.}\index{#1}}{$\mathfrak{Use\ it.}$}
+\newenvironment{usefull}[1]{\colorbox{yellow}{\textbf{NB:#1.}}\index{#1}}{$\mathfrak{Remember\ it.}$}
+\newenvironment{todo}[1]{\textbf{Da fare:}\tbf{#1}\index{#1}}{$\mathfrak{Find\ it.}$}
+
+\begin{document}
+
 \chapter{Sole, Terra, stelle, pianeti: dimensioni caratteristiche}
 \PartialToc
 
 \section{Sole}
 
 \subsection{Massa e densit\'a}
-\begin{itemize*}
+\begin{itemize}
 \item $\msun\approx1.989*10^{30}\,Kg$
 \item $\rhosun\approx1.408 \, gr/cm^3$
-\end{itemize*}
+\end{itemize}
 
-\begin{itemize*}
+\begin{itemize}
 \item $\rsun=6.96*10^8\,m$
-\end{itemize*}
-\begin{itemize*}
+\end{itemize}
+\begin{itemize}
 \item $\msun\approx1.989*10^{30}\,Kg$
 \item $\rhosun\approx1.408 \, gr/cm^3$
-\end{itemize*}
+\end{itemize}
 
 \subsection{G-nal potential energy}
 
@@ -25,9 +38,9 @@
 
 \subsection{superficie}
 
-\begin{itemize*}
+\begin{itemize}
 \item $\gsun=\frac{G\msun}{\rsun^2}=274\,m/s^2$
-\end{itemize*} 
+\end{itemize} 
 
 \subsection{Solar constant}
 
@@ -42,19 +55,19 @@ Solar radiation constant at \SI{1}{\astronomicalunit}
 \subsection{Massa e densit\'a}
 
 \begin{equation*}
-\mT=5.972\sci{27}\,g=5.972\sci{24}\,Kg
+\mearth{}=5.972\sci{27}\,g=5.972\sci{24}\,Kg
 \end{equation*}
 
 \subsection{Mean Earth radius}
 
 \begin{equation*}
-\rT=6.371\sci{8}\,cm=6.371\sci{6}m
+\rearth{}=6.371\sci{8}\,cm=6.371\sci{6}m
 \end{equation*}
 
 \subsection{Oblateness coefficient}
 
 \begin{equation*}
-J_2=\frac{C-A}{\mT\rT^2}
+J_2=\frac{C-A}{\mearth{}\rearth{}^2}
 \end{equation*}
 
 
@@ -89,13 +102,13 @@ Rotation of Earth on its axis.
 
 \section{Angoli}
 
-\begin{itemize*}
+\begin{itemize}
 \item arcosecondo $1''=4.848\sci{-6}\,rad$
 \item 1 degree ($\degree$) = \ang{;60;} = \ang{;;3600}
 \item \SI{1}{\radian} = \ang{57.296;;} = \ang{;;206265}
 \item \SI{1}{\steradian} = \SI{1}{\square\radian} = \SI{3282.8}{\square\deg} = \SI{4.25e10}{\square\arcsec}, where $4\pi$ steradians is the sphere.
 
-\end{itemize*}
+\end{itemize}
 
 
 \section{Stelle}
@@ -289,8 +302,6 @@ N_A=\num{6.022e23}\si{\per\mole}
 
 \si{\atomicmassunit} is defined so that an atom of $^{12}C$ has mass $12 \si{\atomicmassunit}$, $N_A$ is number of $^{12}C$ in $12 \si{\gram}$ of $^{12}C$ and a \si{\mole} is the amount of substance in a system that contains as many atoms as there are atoms in $12\si{\gram}$ of $^{12}C$.
 
-
-
 \section{Gas}
 
 \subsection{Universal Gas constant R}
@@ -326,7 +337,7 @@ In any case, the context and/or units of the gas constant should make it clear a
 
 \section{Particelle fondamentali}
 
-\begin{itemize*}
+\begin{itemize}
 \item $m_P=938.3\Mcs$
 \item $m_P=\SI{1.672 621 898+-0.000 000 021e-27}{\kilo\gram}$
 \item $m_N=939.7\Mcs$
@@ -338,9 +349,7 @@ In any case, the context and/or units of the gas constant should make it clear a
 r_e=(\frac{1}{4\pi\epsilon_0})\frac{e^2}{m_ec^2}
 \end{equation*}
 \end{definition}
-\end{itemize*}
-
-
+\end{itemize}
 
 \section{Costante struttura fine}
  
@@ -455,22 +464,7 @@ Le coniche devono il loro nome al fatto che sono ottenibili sezionando un cono d
 &A=\pi ab
 \end{align*}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.9\textwidth),height=(\textheight),keepaspectratio]{ellipse}
-\caption{Ellisse.}
-\end{figure}
-
-\clearpage
-
-
 \subsection{Parabola}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.9\textwidth),height=(\textheight),keepaspectratio]{parable}
-\caption{Parabola.}
-\end{figure}
 
 \begin{align*}
 &r=\frac{p}{1+\cos{\theta}}\\
@@ -481,20 +475,12 @@ Le coniche devono il loro nome al fatto che sono ottenibili sezionando un cono d
 
 \subsection{Iperbole}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.9\textwidth),height=(\textheight),keepaspectratio]{hyperbola}
-\caption{Iperbole.}
-\end{figure}
-
 \begin{align*}
 &\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\\
 &r=\frac{p}{1+e\cos{\theta}}\\
 &e=\sqrt{1+\frac{b^2}{a^2}},\ p=a(e^2-1)\\
 &x=a\cosh{F},\ y=b\sinh{F}
 \end{align*}
-
-\clearpage
 
 \chapter{Equazioni differenziali}
 \PartialToc
@@ -1012,7 +998,7 @@ Scrivo la forza magnetica per unit\'a di volume
 \index{(C) espressione magnetic stress tensor}
 Let's illustrate the signifiance of magnetic stress tensor with two examples:
 
-\begin{itemize*}
+\begin{itemize}
 \item Magnetic field along z but with arbitrary intensity $B(x,y)$.
 
 $\ten{{P^M}}$ is a scalar and a flow in $(x,y)$ plane is governed by total pressure
@@ -1035,7 +1021,7 @@ Transversal waves with Alfv\'en speed
 &V_A=\sqrt{\frac{B^2}{4\pi\rho}}
 \end{align*}
 
-\end{itemize*}
+\end{itemize}
 
 \section{The induction equation. Magnetic diffusion coefficient}
 
@@ -1272,7 +1258,7 @@ Given $(T,\rho)$ and the possible reactions we are able to find all $N_i$ for a 
 
 Distribution function for the species
 \begin{align*}
-&n(p)=\frac{1}{h^3}\sum_j\frac{g_j}{\expp{(\frac{-\mu+E_j+E(p)}{kT})}\pm1}
+&n(p)=\frac{1}{h^3}\sum_j\frac{g_j}{\exp{(\frac{-\mu+E_j+E(p)}{kT})}\pm1}
 \end{align*}
 $\mu$ \'e il potenziale chimico delle varie specie, $j$ conta i possibili livelli energetici della specie, $g_j$ \'e la degenerazione del livello dello stato $j$, $E(p)$ \'e l'energia cinetica.
 
@@ -1362,7 +1348,7 @@ m\\m\vec{v}\\\frac{m}{2}|\vec{v}-\vec{u}|^2\\
 \end{pmatrix}f(\vec{x},\vec{v},t)\,d^3v\\
 &\PDy{t}{f}+\vec{v}\cdot\PDy{\vec{x}}{f}+\dvec{p}\cdot\PDy{\vec{p}}{f}=C(f)=\Dcvar{\frac{\delta f}{\delta t}}{coll}\\
 &\Dcvar{\frac{\delta f}{\delta t}}{coll}=\int|\vec{v}-\vec{v}_2|\sigma(\Omega)*\\
-&*[f(\vec{v}')f(\vec{v}_2')-f(\vec{v})f(\vec{v}_2)]\,d\Omega\,d^3v_2&\intu{Boltzmann's equation: we wish to derive equations governing spacetime evolution of $\rho$, $\vec{u}$, $U$. We multiply BE by \mblock{\chi(\vec{v}=\insieme{m,m\vec{v},m\vec{v}\vec{v}}}}\\
+&*[f(\vec{v}')f(\vec{v}_2')-f(\vec{v})f(\vec{v}_2)]\,d\Omega\,d^3v_2&\intu{Boltzmann's equation: we wish to derive equations governing spacetime evolution of $\rho$, $\vec{u}$, $U$. We multiply BE by \mblock{\chi(\vec{v}=\insidegraffe{m,m\vec{v},m\vec{v}\vec{v}}}}\\
 &\int(\chi\PDy{t}{f}+\chi v_k\PDy{x_k}{f}+\chi\dvec{p}\PDy{\vec{p}}{f})\,d^3v\\
 &=\int\chi\Dcvar{\frac{\delta f}{\delta t}}{coll}\,d^3v
 \end{align*}
@@ -1660,14 +1646,14 @@ Derivo il teorema del viriale per un corpo macroscopico di particelle interagent
 
 \subsection{Typical plasma parameters in solar wind at 1 \si{\astronomicalunit}}
 
-\begin{itemize*}
+\begin{itemize}
 \item Electron density: $n_e(\si{\per\cubic\cm})=5$.
 \item Temperature: \num{2e5}\si{\kelvin}.
 \item Electron mean free path: \num{e13}\si{\cm}
 \item Debye length $\lambda_D=\num{1400}\si{\cm}$.
 \item Plasma frequency $\omega_p=\num{1.2e5}\si{\second}$.
 \item $n_e\lambda_D^3=\num{1.4e10}$
-\end{itemize*}
+\end{itemize}
 
 
 \subsection{Fully ionized hydrogen gas}
@@ -1911,34 +1897,12 @@ dE_{\omega}=V\frac{\hbar}{\pi^2 c^3}\omega^3\exp{-\frac{\hbar\omega}{KT}}\,d\ome
 &B(T)=\frac{2\pi^4k^4}{15c^2h^3}T^4=\frac{\sigma}{\pi}T^4&\intertext{$\sigma$ \'e la costante di Stefan-Boltzmann.}
 \end{align*}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.99\linewidth),keepaspectratio]{planckf}
-\caption{$B_{\lambda}(T)$ per 3 T.}
-\end{figure}
-
 Of two blackbody curves, the one with higher temperature lies entirely above the other:
 
 \begin{align*}
 &\PDy{T}{B_{\nu}(T)}=\frac{2h^2\nu^4}{c^2kT^2}\frac{\exp{\frac{h\nu}{kT}}}{[\exp{\frac{h\nu}{kT}}-1]^2}>0\\
 &\planckf{\nu}(T\to0)\to0,\ \planckf{\nu}(T\to\infty)\to\infty
 \end{align*}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.99\linewidth),keepaspectratio]{planckf2}
-\caption{Intensit\'a specifica per radiazione di corpo nero in range di T: $\planckf{\nu}(T)$ vs $\nu$.}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.99\linewidth),keepaspectratio]{planckkraus}
-\caption{Intensit\'a specifica per radiazione di corpo nero in range di T (cgs). Vedi: Kraus, radio astronomy.}
-\end{figure}
-
-
-\clearpage
-
 
 \subsection{Energy density of black body radiation.}
 
@@ -2045,7 +2009,7 @@ $A=\sum_iA_i=\sum\lambda_in_i$.
 
 Casi particolari:
 
-\begin{enumerate*}
+\begin{enumerate}
 
 \item $\lambda_1\ll\lambda_2$ (parent long lived - secular equilibrium).
 
@@ -2072,7 +2036,7 @@ vedo che al crescere di t il rapporto
 
 I nuclei parent decadono rapidamente, l'attivit\'a dei nuclei di prima generazione raggiunge un massimo e poi decade con la sua costante caratteristica; $N_2(t)\abc{t\gg\tau_1}N_0\frac{\lambda_1}{\lambda_1-\lambda_2}\exp{-\lambda_2t}$
 
-\end{enumerate*}
+\end{enumerate}
 
 
 \chapter{Onde EM e interazione con materia.}
@@ -2302,12 +2266,6 @@ Mostro che la deviazione dall'equilibrio termodinamico necessaria per il traspor
 u=aT^4
 \end{equation*}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.4\textwidth),height=(\textheight-11mm),keepaspectratio]{radiativet}
-\caption{Intensity of the radiation field.}
-\end{figure}
-
 Geometrical relations
 \begin{align*}
 &dl=\frac{dr}{\cos{\theta}}\\
@@ -2511,20 +2469,6 @@ More generally, (ferromagnetic) semiconductors return both electro-gyration and 
 \section{Fraunhofer lines}
 
 Linee assorbimento.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.99\textwidth),height=(\textheight),keepaspectratio]{Fraunhofer_lines}
-\caption{Linee di Fraunhofer nello spettro solare.}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=(0.99\textwidth),height=(\textheight),keepaspectratio]{Fraunhoferlambda}
-\caption{Lunghezza d'onda delle principali inee di Fraunhofer.}
-\end{figure}
-
-\clearpage
 
 \section{Effetto stark}
 
@@ -2787,3 +2731,5 @@ The expression above can also be written in terms of individual molecules by exp
 \begin{align*}
 &I=I_0\frac{8\pi^4\alpha^2}{\lambda^4R^2}(1+\cos^2{\theta})
 \end{align*}
+
+\end{document}
