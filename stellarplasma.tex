@@ -1,5 +1,21 @@
-\section{Comportamento materia densit\'a temperature stellari}
+\chapter{Comportamento materia densit\'a temperature stellari}
 
+\section{EOS}
+
+\subsection{Fully ionized perfect gas}
+\keyword{perfect gas}: potential energy between particle negligible respect kinetic energy and de Broglie $\lambda_{dB}=\frac{h}{p}\ll\ambda$ mean distance between particles - maxwell distro with mean kinetic energy $\frac{3}{2}kT$:
+\begin{align*}
+&kT>\frac{Z^2e^2}{d}\\
+&\frac{4\pi}{3}nd^3=\frac{4\pi\rho}{3\mu m_H}d^3=1\\
+&d\approx(\frac{\mu m_H}{\rho})\expy{1/3}\\
+&\frac{h}{p}=\frac{h}{\sqrt{2mkT}}\ll d
+\end{align*}
+\keyword{Free energy per unit mass of perfect gas}:
+\begin{align*}
+&F=-kT\sum_sN_s[\frac{3}{2}\ln{T}-\ln{(N_s\rho)}+\ln{G_s}+1+\ln{g_s}]+F_{int}
+\end{align*}
+$g_s$ statistical weight (number of state with same energy), $G_s=(2\pi km_s/h^2)\expy{3/2}$, $F_{int}$ energia libera particelle con stati legati
+\subsection{Interazione coulombiana}
 La presenza dello ione $Z_i$ altera la distribuzione di cariche quindi devo determinare il potenziale $\phi_i$ generato da $Z_i$ e dalla distribuzione di cariche attorno; usando la formula di Boltzmann la densit\'a delle particelle con carica Z risulta
 \begin{equation}\label{eq:Bdistroelectricpot}
 n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}
