@@ -1,20 +1,6 @@
-\section{Ordini di grandezza}
+\chapter{stellar model}
 
-\subsection{Misure adimensionali interazioni}
-
-Potenziale tra 2 nucleoni $-Gm_H^2/r$ con $r=\frac{h}{2\pi m_Hc}$ (Pindet): in unit\'a $m_Hc^2$ $\alpha_G=\frac{2\pi Gm_H^2}{hc}\approx\num{e-39}$.
-
-$\alpha_{SF}=\frac{e^2}{(4\pi\epsilon_0)\hbar c}$.
-
-The ratio of three characteristic lengths:
-
-the classical electron radius $r_e=(\frac{1}{4\pi\epsilon_0})\frac{e^2}{m_ec^2}$, the Bohr radius $a_0=(4\pi\epsilon_0)\frac{\hbar^2}{m_ee^2}$  and the Compton wavelength of the electron $\lambdabar_e=\frac{\hbar}{m_ec}$:
-
-$r_e=\frac{\alpha\lambda_e}{2\pi}=\alpha^2a_0$.
-
-$e^2=1.44\,MeV\,fm$
-
-TODO: pressure ionizzation and electron degeneracy (why eos for H,He)
+\chapter{evolution of stars}
 
 \subsection{Massa minima innesco fusione H}
 
@@ -118,17 +104,32 @@ The most luminous therefore youngest object reflect its nature of accreting obje
 \item Slower accretion give radius more time to shrink but D-burning thermostat limit that. D ignition: $^2H+^1H\to^3He+\gamma(\SI{5.5}{\mega\ev})$.
 \item ''position'' of Hayashi track: \xaumenta{Y}, \xaumenta{T_e}; \xaumenta{Z}, \xdiminuisce{T_e}; \xdiminuisce{M}, \xdiminuisce{T_e}
 \item formation of radiative core caused by \xdiminuisce{R}, \xdiminuisce{L}, \xdiminuisce{\nabla_{rad}} ($L\propto R^2$); parallelamente \xdiminuisce{R}, \xaumenta{T}, \xdiminuisce{\exv{\kappa}} ($\kappa_{kr}\propto$), \xdiminuisce{\nrad{}}, \xaumenta{T_e}
+(stahler palla fig 16.8)
 \end{itemize}
 
 \subsection{Pre-MS star model}
-
+Structure equation:
+\begin{align*}
+&\PDy{M_r}{r}=\frac{1}{4\pi r^2\rho}\\
+&\PDy{M_r}{P}=-\frac{GM_r}{4\pi r^4}\\
+&\PDy{M_r}{L_{int}}=\epsilon-T\PDy{t}{s}
+\end{align*}
+fourth equation in radiative/convective zones
+\begin{align*}
+&T^3\PDy{M_r}{T}=-\frac{3\kappa L_{int}}{256\pi^2\sigma r^4}\\
+&\PDy{M_r}{s}
+\end{align*}
+HE integrated from phot to inf
+\adjm{P_{phot}=\frac{GM_*}{R_*^2}\int_{R_*}^{\infty}\rho\,dr\approx\frac{GM_*}{R_*^2\kappa_{phot}}\int_{R_*}^{\infty}\rho\kappa\,dr=\frac{GM_*\Delta\tau}{R_*^2\kappa_{phot}}}
+(adim eqs:
 \adjm{x=\frac{r}{R},\ q=\frac{M_r}{M},\ t=\frac{T}{T_0},\ p=\frac{P}{P_0},\ T_0=\frac{\mu GMm_H}{Rk},\ P_0=\frac{GM^2}{4\pi R^4}}
 Continuity: $\TDy{x}{q}=\frac{p}{t}x^2$, HE: $\TDy{x}{p}=-\frac{p}{t}\frac{q}{x^2}$, $\nad$ for fully convective star: $P=CT\expy{5/2}\to p=Et\expy{2.5}$ (C determines the adiabat).
-HayT is vertical $\TDly{T_e}{L}>10$, mild mass deps $\TDly{M}{T_e}\approx0.2$. Relaistically: surface condition+super-adibat layer.
+HayT is vertical $\TDly{T_e}{L}>10$, mild mass deps $\TDly{M}{T_e}\approx0.2$. Realistically: surface condition+super-adibat layer.
+)
 
 As T increses due to contraction (V.T.)a central radiative core is formed: when a sizeble radiative core formed path toward higher $T_e$ is almost horizontal.
 At temperature \SIrange{1e6}{2.5e6}{\kelvin} D/Li(Be/B) are burnt by proton capture (Li/D depletion at surface for fully convective star).
-In general larger masses have lower Li depletion, given mass increases increasing Z: \xaumenta{M}(or \xdiminuisce{Z}) lower convective zone but also earlier retreat from center
+In general larger masses have lower Li depletion, given mass increases increasing Z: \xaumenta{M}(or \xdiminuisce{Z}) lower convective zone but also earlier retreat from center (fig 16.10)
 
 
 \section{Sequenza principale}
