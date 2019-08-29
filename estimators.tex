@@ -1,3 +1,4 @@
+\chapter{inference}
 
 \section{Sufficiency}
 
@@ -29,9 +30,20 @@ $A=\{X=x\}\subseteq B=\{T(X)=T(x)\}$; only if:
 If part pg 315
 
 \section{Fisher Information}
-Informazione contenuta nei dati sul parametro $\theta$:
+
+\subsection{Score statistics}
+
+\begin{align*}
+&S=\PDy{\theta}{\log{L}}\\
+&\E{[S]}=0\\
+&\var{[S]}=-\E{[\PtwoDy{\theta}{\log{L}}]}=-I\\
+&S\to N(0,I)
+\end{align*}
+
+Informazione di Fisher
 \[I_{\Vec{X}}(\theta)=NI_{X_1}=N\E_{\theta}[(\PDy{\theta}\log{f(X_1;\theta)})^2]=-N\E_{\theta}[\PtwoDy{\theta}\log{f(X_1;\theta)}]\]
 $I_{X}\geq I_T$ uguaglianza vale per T suff.
+
 \section{Propriet\'a stimatori}
 
 \begin{itemize}
