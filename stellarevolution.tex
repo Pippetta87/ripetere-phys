@@ -1,10 +1,36 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
 \chapter{stellar model}
 
 \section{structure equations} 
 
-\subsection{Dynamil stability}
+\subsection{Dynamical stability}
 
-salaris 3.1.80
+Una regione stellare \'e convettivamente stabile se una perturbazione di densit\'a infinitesima non cresce ad ampiezza finita.
+\begin{align*}
+&\rho\PtwoDy{t}{(\Delta r)}=-g\Delta\rho\\
+&=-g[\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]\Delta r
+\end{align*}
+
+La forza di Archimede ha verso opposta alla perturbazione se
+\begin{equation*}
+[\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]>0
+\end{equation*}
+
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{convectivestability}\label{fig:convectivestability}
+\end{figure}
+
+\begin{itemize}
+    \item Rayleigh-Taylor instability: $\TDy{r}{\ln{(\mu)}}>0$
+    \item $\nrad>\nad-\frac{\xi_{\mu}}{\xi_T}\TDly{(P)}{(\mu)}$
+\end{itemize}
+		
+\subsection{Gradiente ambientale nelle regioni convettive}
+
+
 
 \chapter{evolution of stars}
 
@@ -140,3 +166,4 @@ In general larger masses have lower Li depletion, given mass increases increasin
 
 \section{Sequenza principale}
 
+\end{document}
