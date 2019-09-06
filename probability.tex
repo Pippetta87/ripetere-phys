@@ -2,7 +2,20 @@
  
 \begin{document}
 
-\chapter{axioms and defs}
+\chapter{Probability and statistics}
+
+\section{Kolmogorov axioms}
+$X_i$ elementary events mutually exclusive
+\begin{align*}
+&\prob{(X_i)}\geq0,\ \forall i\\
+&\prob{(X_i\cup X_j)}=\prob{(X_i)}+\prob{(X_j)}\\
+&\sum_{\Omega}\prob{(X_i)}=1
+\end{align*}
+A, B insiemi di eventi elementari $X_i$ non esclusivi, $\prob{(A|B)}$ \'e prob. che evento elementare che appartiene a B sia anche in A
+\begin{align*}
+&\prob{(A\cap B)}=\prob{(A|B)}\prob{(B)}=\prob{(B|A)}\prob{(A)}
+&\prob{(A\cup B)}=\prob{(A)}+\prob{(B)}-\prob{(A\cap)} 
+\end{align*}
 \begin{itemize}
 \item \keyword{Eventi indipendenti}: joint probability equals product of probability
 \[\prob{(A\cap B)}=\prob{(A)}\prob{(B)}\Leftrightarrow \prob{(A)}=\frac{\prob{(A\cap B)}}{\prob{(B)}}=\prob{A|B}\]
@@ -10,28 +23,6 @@
 \item \keyword{disuguaglianza di Chebychev}: X ha media $\mu$ e var $\sigma^2$ e $\lambda>0$:
 \[\prob{(|X-\mu|<\lambda\sigma)}\geq1-\frac{1}{\lambda^2}\]
 
-\end{itemize}
-
-\chapter{pdf}
-
-\section{MUST KOWN probability density function}
-
-\subsection{Poissonian}
-
-\begin{itemize}
-\item binomial
-\[b(x;n,p)=\frac{n!}{(n-x)!x!}p^x(1-p)^{n-x}\]
-where $n\to\infty$ and $\mu=np$ constant
-
-\item conteggi in intervallo condizione bassa $p=c\Delta t=\frac{\lambda T}{n}$ occurrence in one intervl are indipendent from previous interval: probability of x arrival in interval $(0,t+\Delta t]$
-\begin{align*}
-&f(x,t+\Delta t)=f(x,t)f(0,\Delta t)+f(x-1,t)f(1,\Delta t)\\
-&=f(x,t)(1-a\Delta t)+f(x-1,t)a\Delta t\\
-&\TDy{t}{f}=\lim_{\Delta t\to0}\frac{f(x,t+\Delta t)-f(x,t)}{\Delta t}\\
-&=a[f(x-1,t)-f(x,t)]
-\end{align*}
-sopra \'e soddisfatta da
-\[f(x,t)=\frac{(at)^x\exp{-at}}{x!}\]
 \end{itemize}
 
 \end{document}
