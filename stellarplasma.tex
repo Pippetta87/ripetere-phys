@@ -28,6 +28,12 @@ Corrections parametrized by $\Gamma=\frac{(Ze)^2}{dkT}$: when density suff. low 
 &\Gamma=\frac{\exv{Z}\expy{1/3}e^2}{d'kT}\exv{Z\expy{5/3}}\\
 &d'=(\frac{4\pi\rho}{3\mu_im_H})\expy{-1/3}
 \end{align*}
+La principale correzione che tiene conto dell'interazioni tra particelle \'e dovuta alle interazioni coulombiane.
+
+\begin{workout}[Correzioni interazioni coulombiane- vedi schermaggio]
+
+\end{workout}
+
 La presenza dello ione $Z_i$ altera la distribuzione di cariche quindi devo determinare il potenziale $\phi_i$ generato da $Z_i$ e dalla distribuzione di cariche attorno; usando la formula di Boltzmann la densit\'a delle particelle con carica Z risulta
 \begin{equation}\label{eq:Bdistroelectricpot}
 n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}
@@ -66,6 +72,30 @@ La soluzione di \eqref{eq:poissonspheric} \'e
 \begin{equation}\label{eq:screenedpotential}
 \phi_i=\frac{Z_ie}{r_i}\exp{-\midfrac{r}{r_D}}
 \end{equation}
+
+[formula corretta potenziale elettrostatico generato da nuvola elettronica attorno a $Z_i$]
+
+\begin{align*}
+&\nabla^2V_i=-4\pi e\sum Zn_Z\approx\frac{1}{r_D^2}V_i\intertext{da cui ottengo il potenziale generato dalla nube di cariche attorno a Z}
+&\phi_Z=-\frac{eZ}{r_D}
+\end{align*}
+con $r_D$ raggio di Debye definito da:
+\begin{equation*}
+\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
+\end{equation*}
+
+[correzioni $u_c/P_c$: notazione consistente.]
+Le correzioni dovute alle interazioni coulombiane sono
+\begin{align}
+&u=\frac{3}{2}\frac{\gasconstant{}T}{\mu}+u_c,\ \rho u_c=\frac{1}{2}\sum_ZeZ\overline{n}_Z\phi_Z=-e^3\sqrt{\frac{\pi\rho}{kT}}(N_A\zeta)\expy{\frac{3}{2}}\\
+&P=\frac{\rho}{\mu}kT+P_c,\  P_c=\frac{1}{3}u_c
+\end{align}
+
+Le correzioni dovute alle interazioni coulombiane sono
+\begin{align}
+&u=\frac{3}{2}\frac{\gasconstant{}T}{\mu}+u_c,\ \rho u_c=\frac{1}{2}\int\phi(\vec{r})\rho_c(\vec{r})\,d^3r\\
+&P=\frac{\rho}{\mu}kT+P_c,\  P_c=\frac{1}{3}\rho u_c
+\end{align}
 
 \section{Ordini di grandezza}
 
