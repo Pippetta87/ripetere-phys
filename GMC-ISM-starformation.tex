@@ -37,10 +37,12 @@ $\frac{U}{|W|}\approx\frac{MRT}{\mu}\invers{(\frac{GM^2}{R})}=\num{3e-3}\invers{
 &\vec{j}=n_ie\vec{u}_i-n_ee\vec{u}_e=n_ee(\vec{u}_i-\vec{u}_e)
 \end{align*}
 in SR of neutral matter moving at $\vec{u}$: $\vec{j}'=\sigma \vec{E}'=\vec{j}$  and $\vec{E}'=\vec{E}+\frac{\vec{u}}{c}\wedge\vec{B}$ so fundamental MHD equation for B is
-\[\TDy{t}{\vec{B}}=\nabla\wedge(\vec{u}\wedge\vec{B})-\nabla\wedge(\frac{c^2}{4pi\sigma}\nabla\wedge\vec{B})\] - we can neglect Ohmic dissipation and obtain flux freezing only if $\frac{\sigma L^2}{c^2}$ much greater than any timescale of interest - estimating conductivity: for conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{B}$ and smoother drift the latter changes stochastically due to collisions with chiefly $H_2$ that exert effective drag an electrons that opposes acceleration from ambient electric field estblishing steady state drift velocity - steady state EOM for electrons in comoving SR
+\[\TDy{t}{\vec{B}}=\nabla\wedge(\vec{u}\wedge\vec{B})-\nabla\wedge(\frac{c^2}{4pi\sigma}\nabla\wedge\vec{B})\] - we can neglect Ohmic dissipation and obtain flux freezing only if $\frac{\sigma L^2}{c^2}$ much greater than any timescale of interest - estimating conductivity: for conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{B}$ and smoother drift the latter changes stochastically due to collisions with chiefly $H_2$ that exert effective drag an electrons that opposes acceleration from ambient electric field estblishing steady state drift velocity - steady state EOM for electrons and ions in comoving SR
 \begin{align*}
 &0\approx\vec{a}=-en_e(\vec{E}'+\frac{\vec{u}_e'}{c}\wedge\vec{B}')+n_ef_{en}'\\
-&f_{en}'=-nm_e\exv{\sigma_{en}u_e'}\vec{u}_e'
+&0=en_e(\vec{E}'+\frac{\vec{u}_i'}{c}\wedge\vec{B}')+n_ef_{in}'\\
+&f_{en}'=-nm_e\exv{\sigma_{en}u_e'}\vec{u}_e'\\
+&f'_{in}=-nm_n\exv{\sigma_{in}u_i'}\vec{u}_i'
 \end{align*}
-drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$ 
+drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$
 \end{itemize}
