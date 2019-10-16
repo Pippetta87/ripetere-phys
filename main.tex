@@ -51,12 +51,13 @@
 %%% COUNTERS
 \setsecnumdepth{subsection}
 \setcounter{tocdepth}{-1}       % chapter
+\settocdepth{chapter}
 \newcounter{cherrychapter}%[chapte]
 \setcounter{cherrychapter}{1}
 \newcounter{partworkouts}%[chapte]
 \setcounter{partworkouts}{1}
 
-%%%% iimport functions
+%%%% import functions
 \usepackage{functions}
 \usepackage{sources}
 %%%%%%%%%%%%%%%%%%%% MULTINDExssss (number of chapters)
@@ -64,8 +65,6 @@
 %\makeindex[2]%meditazione]
 %\makeindex[3]%nitidezza]
 %\makeindex[4]%teatro]
-\setsecnumdepth{subsection}
-\settocdepth{chapter}
  
 \begin{document}%BEGIN
 \pagestyle{mystyle}%% mystyle defined in usepkg
@@ -75,7 +74,7 @@
 %\makeatother
 \maketitle
 \listoftodos
-\startcontents[chapters]
+\def{\csubtoc}{1}%\startcontents[chapters]
 \tableofcontents*
 
 \part{Fisica nucleare}
