@@ -3,6 +3,21 @@
 \newcommand{\iidrv}[1][X]{$#1_1,\ldots,#1_{n}$}
 \newcommand{\adjm}[1]{\resizebox{.99\hsize}{!}{$#1$}\vspace{10px}}
 
+\newcommand{\PartialToc}{
+\vspace*{1pc}\hrule\vspace*{0.5pc}% toc at beginning chapter
+\startcontents[chapters]\vbox{\Large 
+\hypertarget{outline\thechapter}{\noindent Outline Cap. \thechapter}}
+\printcontents[chapters]{}{1}{\setcounter{tocdepth}{3}}\vspace*{0.5pc}\hrule
+%\lfoot{\begingroup
+%\hypersetup{allcolors=blue}
+%Toc.\hyperlink{outline\thepart}{\thepart}.\hyperlink{outline\thechapter}{\thechapter} %Pg: \thepage (\thepart)ch.\thechapter-Sec.
+%\thesection,\hyperlink{toc}{Main Toc}\endgroup
+%}
+}
+%\newcommand{\PartialToc}{\vspace*{2pc}\hrule\vspace*{1pc}% add partial toc (in each chapter)
+%\startcontents[chapters]\vbox{\bf\Large Outline}
+%\printcontents[chapters]{l}{1}{\setcounter{tocdepth}{3}}\vspace*{1pc}\hrule}
+
 \newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
 
 \makeatletter
