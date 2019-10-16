@@ -20,6 +20,7 @@
 \usepackage{localF}
 \usepackage{mathOp}
 %%%%%%%%%%%%%%%%%% refname, titletoc, titlesec setting
+\def{\csubtoc}{1}%\startcontents[chapters]
 \usepackage{titleT-ref}%toc depth
 
 %%%%%%%%%%%% Hyperref package
@@ -73,9 +74,8 @@
 %\renewcommand*{\@tocmaketitle}{\label{toc}{Table of Contents}}
 %\makeatother
 \maketitle
-\ifnum\csubtoc=1uno\else boh\fi
+\ifnum\csubtoc=1 uno\else boh\fi
 \listoftodos
-\def\csubtoc{1}%\startcontents[chapters]
 \tableofcontents*
 
 \part{Fisica nucleare}
