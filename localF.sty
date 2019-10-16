@@ -4,8 +4,9 @@
 \newcommand{\adjm}[1]{\resizebox{.99\hsize}{!}{$#1$}\vspace{10px}}
 
 \newcommand{\PartialToc}{
+\ifnum\csubtoc=1 \ifnum\the\value{chapter}=1 \startcontents[chapters]\else \stopcontents[chapters]\startcontents[chapters] \fi \fi
 \vspace*{1pc}\hrule\vspace*{0.5pc}% toc at beginning chapter
-\startcontents[chapters]\vbox{\Large 
+%\startcontents[chapters]\vbox{\Large 
 \hypertarget{outline\thechapter}{\noindent Outline Cap. \thechapter}}
 \printcontents[chapters]{}{1}{\setcounter{tocdepth}{3}}\vspace*{0.5pc}\hrule
 %\lfoot{\begingroup
