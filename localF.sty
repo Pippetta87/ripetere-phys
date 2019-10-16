@@ -21,6 +21,7 @@
 %chapter name
 \makeatletter%% vedi nameref
 \newcommand*{\currentname}{\@currentlabelname}
+ \newcommand{\linkdest}[1]{\hypertarget{#1}{}}
 \makeatother
 
 \def\headtoccolor{bulgarianrose}
@@ -80,6 +81,27 @@
 \newcommand\listofworkouts{%
   \section*{\listofworkoutsname}\listofworkoutsbasic
 }
+
+%list of todo
+\newcounter{todokey}%conta i todo totali per auto ref
+\newcounter{todosectionlist}% conta i todo prima di keywordlist
+\makeatletter
+\newcommand\todo[2][todo-\thetodokey]{%todo
+	\addtocounter{todokey}{1}
+	\noindent{%
+		\color{todo}{#2}%
+	}%
+	\phantomsection% comment out if hyperref is not used
+	\linkdest{#1}%
+	\addcontentsline{todo}{figure}{\textbullet\protect\hyperlink{#1}{#2}\hspace{1mm}}%
+}
+\newcommand{\listoftodosbasic}{%listoftodos
+	\@starttocorig{todo}
+}
+\newcommand\listtodosname{TODO}%listoftodo
+\newcommand\listoftodos{%
+\listtodosname\phantomsection: \listoftodosbasic}
+\makeatother
 
 \newcommand{\xaumenta}[1]{${#1}\uparrow$}
 \newcommand{\xdiminuisce}[1]{${#1}\downarrow$}
