@@ -27,17 +27,22 @@ $\frac{U}{|W|}\approx\frac{MRT}{\mu}\invers{(\frac{GM^2}{R})}=\num{3e-3}\invers{
 
 \chapter{stahler palla (253)- Clouds equilibrium}
 
-\begin{itemize}
-\item Collapse is localized within lorge complexes - since most molecular gas is not collapsing we investigate equilibrium of forces under which clouds can last over long period
+\section{Equilibrium of forces in molecular clouds}
+
+Collapse is localized within lorge complexes - since most molecular gas is not collapsing we investigate equilibrium of forces under which clouds can last over long period
 \item Equilibrium of thermal pressure and self-gravity: isothermal first approximation for dense core. Lane-Eden equation: gravitatonal stability and critical lenght scale using isothermal Lane-Emden model (for stable cloud increases of $P_0$ causes increase of internal pressure: clouds of low density constrast are confined by external pressure, all clouds with $\frac{\rho}{\rho_c}14.$ at right of first maximum are gravitationally unstable - $M_{BE}=\frac{m_1a_T^4}{P_0\expy{1/2}G\expy{3/2}}$). Jeans classics analysis of self-graviting waves propagating through uniform medium: $\lambda_J=\sqrt{\frac{\pi c_s^2}{G\rho_0}}$ - dense core/Bok globe are close to Instability
 \item rotation support. Dense cores have measured rotation rate (\SI{1.27}{\cm} line of $NH_3$ and others - ch3), and gradient in radial velocity from CO mapping of GMC. Cyl symm-sys specific AM about z $j=ou_{\phi}=r\sin\theta u_{\phi}$: centrifugal force per unit mass $j^2/o^3$ which have to be balanced in EOM, centrifugal potential $\Phi_{cen}=-\int_0^oj^2/o^3\,do$ so we can extendend the non rotating case. Numerical methods: trial density.
-\item magnetic flux freezing - as we go from lower to higher density object $M$, $T$, $W$ becomes comparable while observed $B_{\parallel}$ increases: flux freezing - magnetic field lines tethered to the gas - MHD equations:
+\subsection{MHD equations}
+As we go from lower to higher density object $M$, $T$, $W$ becomes comparable while observed $B_{\parallel}$ increases: flux freezing - magnetic field lines tethered to the gas - MHD equations:
 \begin{align*}
 &\nabla\wedge\vec{B}=\frac{4\pi}{c}\vec{j}\\
 &\vec{j}=n_ie\vec{u}_i-n_ee\vec{u}_e=n_ee(\vec{u}_i-\vec{u}_e)
 \end{align*}
-in SR of neutral matter moving at $\vec{u}$: $\vec{j}'=\sigma \vec{E}'=\vec{j}$  and $\vec{E}'=\vec{E}+\frac{\vec{u}}{c}\wedge\vec{B}$ so fundamental MHD equation for B is
-\[\TDy{t}{\vec{B}}=\nabla\wedge(\vec{u}\wedge\vec{B})-\nabla\wedge(\frac{c^2}{4pi\sigma}\nabla\wedge\vec{B})\] - we can neglect Ohmic dissipation and obtain flux freezing only if $\frac{\sigma L^2}{c^2}$ much greater than any timescale of interest - estimating conductivity: for conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{B}$ and smoother drift the latter changes stochastically due to collisions with chiefly $H_2$ that exert effective drag an electrons that opposes acceleration from ambient electric field estblishing steady state drift velocity - steady state EOM for electrons and ions in comoving SR
+neglected displacement current $\frac{1}{c}\PDy{t}{\vec{E}}$ for low frequencies interesting here.
+In SR of neutral matter moving at $\vec{u}$: $\vec{j}'=\sigma \vec{E}'=\vec{j}$  and $\vec{E}'=\vec{E}+\frac{\vec{u}}{c}\wedge\vec{B}$ so fundamental MHD equation for B is
+\[\TDy{t}{\vec{B}}=\nabla\wedge(\vec{u}\wedge\vec{B})-\nabla\wedge(\frac{c^2}{4pi\sigma}\nabla\wedge\vec{B})\] - we can neglect Ohmic dissipation and obtain flux freezing only if $\frac{\sigma L^2}{c^2}$ much greater than any timescale of interest 
+\subsection{Estimating conductivity}
+For conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{B}$ and smoother drift the latter changes stochastically due to collisions with chiefly $H_2$ that exert effective drag an electrons that opposes acceleration from ambient electric field estblishing steady state drift velocity - steady state EOM for electrons and ions in comoving SR
 \begin{align*}
 &0\approx\vec{a}=-en_e(\vec{E}'+\frac{\vec{u}_e'}{c}\wedge\vec{B}')+n_ef_{en}'\\
 &0=en_e(\vec{E}'+\frac{\vec{u}_i'}{c}\wedge\vec{B}')+n_ef_{in}'\\
@@ -45,4 +50,3 @@ in SR of neutral matter moving at $\vec{u}$: $\vec{j}'=\sigma \vec{E}'=\vec{j}$ 
 &f'_{in}=-nm_n\exv{\sigma_{in}u_i'}\vec{u}_i'
 \end{align*}
 drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$
-\end{itemize}
