@@ -12,14 +12,15 @@
 
 \makeatletter
 \makeevenfoot{mystyle}{
-\begingroup
+\mbox{\kern\dimexpr-1.5in\relax\small
 \hypersetup{allcolors=blue}
-Toc:(\hyperlink{outline\thepart}{\thepart})-\hyperlink{outline\thechapter}{\thechapter} Pg: \thepage (\thepart)ch.\thechapter-Sec.\thesection,\hyperlink{toc}{Main Toc}\endgroup
+Toc:(\hyperlink{outline\thepart}{\thepart})-\hyperlink{outline\thechapter}{\thechapter} Pg: \thepage (\thepart)ch.\thechapter-Sec.\thesection,\hyperlink{toc}{Main Toc}}
 }{}{}
 \makeoddfoot{mystyle}{
-\begingroup
+\mbox{\kern\dimexpr-1.5inrelax\small
 \hypersetup{allcolors=blue}
-Toc:(\hyperlink{outline\thepart}{\thepart})-\hyperlink{outline\thechapter}{\thechapter} Pg: \thepage (\thepart)ch.\thechapter-Sec.\thesection,\hyperlink{toc}{Main Toc}\endgroup
+Toc:(\hyperlink{outline\thepart}{\thepart})-\hyperlink{outline\thechapter}{\thechapter} Pg: \thepage (\thepart)ch.\thechapter-Sec.\thesection,\hyperlink{toc}{Main Toc}
+}
 }{}{}
 %\makeevenhead{mainmatterstyle}{}{}{}
 %\makeoddhead{mainmatterstyle}{}{\@title}{}
@@ -96,6 +97,5 @@ shadows
 
 \usepackage{verse}
 \usepackage{mathtools}
-
-
+\usepackage{totcount}
 %\usepackage{trace}

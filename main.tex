@@ -17,11 +17,11 @@
 \usepackage{usepkg}
 
 %% import moodded thing
-\usepackage{localF}
 \usepackage{mathOp}
 %%%%%%%%%%%%%%%%%% refname, titletoc, titlesec setting
 \def\csubtoc{1}%\startcontents[chapters]
 \usepackage{titleT-ref}%toc depth
+\usepackage{localF}
 
 %%%%%%%%%%%% Hyperref package
 \usepackage{hyperref}
@@ -51,8 +51,10 @@
 
 %%% COUNTERS
 \setsecnumdepth{subsection}
-\setcounter{tocdepth}{-1}       % chapter
-\settocdepth{chapter}
+\setcounter{tocdepth}{0}       % chapter
+%\settocdepth{chapter}
+\regtotcounter{chapter}
+
 \newcounter{cherrychapter}%[chapte]
 \setcounter{cherrychapter}{1}
 \newcounter{partworkouts}%[chapte]
@@ -74,7 +76,6 @@
 %\renewcommand*{\@tocmaketitle}{\label{toc}{Table of Contents}}
 %\makeatother
 \maketitle
-
 \listoftodos
 \tableofcontents*
 
@@ -99,5 +100,5 @@
 \subfile{GMC-ISM-starformation}
 \subfile{stellarevolution}
 
-\stopcontents[chapters]
+%\stopcontents[chapters]
 \end{document}
