@@ -56,14 +56,14 @@ For conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{
 &f_{en}'=-nm_e\exv{\sigma_{en}u_e'}\vec{u}_e'\\
 &f'_{in}=-nm_n\exv{\sigma_{in}u_i'}\vec{u}_i'
 \end{align*}
-drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$: \[\sigma=\frac{n_ee^2}{n}[\frac{1}{\exv{\sigma_{en}u_e'}m_e}+\frac{1}{\exv{\sigma_{in}u_i'}m_n}]\] in molecular clouds of solar composition $\exv{\sigma_{en}u_e'}\approx\SI{1.0e-7}{\cubic\cm\per\second}$, $\exv{\sigma_{in}u_i'}\approx\SI{1.5e-9}{\cubic\cm\per\second}$ so timescale for ohmic dissipation for clump within GMC $L\approx\SI{1}{\parsec}$, $n\approx\SI{e3}{\per\cubic\cm}$: $\sigmaL^2/c^2\approx\SI{e17}{\year}$.
+drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$: \[\sigma=\frac{n_ee^2}{n}[\frac{1}{\exv{\sigma_{en}u_e'}m_e}+\frac{1}{\exv{\sigma_{in}u_i'}m_n}]\] in molecular clouds of solar composition $\exv{\sigma_{en}u_e'}\approx\SI{1.0e-7}{\cubic\cm\per\second}$, $\exv{\sigma_{in}u_i'}\approx\SI{1.5e-9}{\cubic\cm\per\second}$ so timescale for ohmic dissipation for clump within GMC $L\approx\SI{1}{\parsec}$, $n\approx\SI{e3}{\per\cubic\cm}$: $\sigma L^2/c^2\approx\SI{e17}{\year}$.
 
 \subsection{Flux freezing}
 \begin{itemize}
 \item Induction equation: Faraday $\vecp{\nabla}{E}=-\PDy{t}{\vec{B}}$, Ampere $\vecp{\nabla}{B}=\mu_0\vec{j}$ and Ohm $\vec{E}+\vecp{v}{B}=\vec{j}/\sigma$ law where $\vec{v}$ is the velocity of the field hence $\TDy{t}{\vec{B}}=\eta\nabla^2\vec{B}+\nabla\wedge(\vecp{v}{B})$. \keyword{Magnetic Reynolds number}: $\eta\nabla^2\vec{B}\approx\frac{\eta B}{L^2}$, $\nabla\wedge(\vecp{v}{B})\approx\frac{VB}{L}$ whose ratio is $R_m=\frac{LV}{\eta}$
 \item Infinite conductivity ($\eta\to0$). Change of magnetic flux over time: first term due to change of B with time, second due to change of integral region due to gas motion ($d\vec{S}=\vec{v}\wedge d\vec{s}$), then using Stokes' theorem ($\int\nabla\wedge\vec{A}=\int\vec{A}\cdot d\vec{s}$)
 \begin{align*}
-&\TDy{t}{\Phi_B}=\TDof{t}\int\vec{B}\cdot d\vec{S}=\int_S\PDy{t}{\vec{B}}\cdot d\vec{S}+\oint_{C}\vec{B}\cdot\vec{v}\wedged\vec{l}\\
+&\TDy{t}{\Phi_B}=\TDof{t}\int\vec{B}\cdot d\vec{S}=\int_S\PDy{t}{\vec{B}}\cdot d\vec{S}+\oint_{C}\vec{B}\cdot\vec{v}\wedge d\vec{l}\\
 &\TDy{t}{\Phi_B}=\int[\PDy{t}{\vec{B}}-\nabla(\vecp{v}{B})]\cdot d\vec{S}=0
 \end{align*}
 
