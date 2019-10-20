@@ -33,13 +33,12 @@ $\frac{U}{|W|}\approx\frac{MRT}{\mu}\invers{(\frac{GM^2}{R})}=\num{3e-3}\invers{
 \chapter{stahler palla (253)- Clouds equilibrium}
 %\PartialToc
 
-\section{Equilibrium of forces in molecular clouds}
-
+\section{Equilibrium of forces in molecular clouds: thermal pressure and rotation}
 Collapse is localized within lorge complexes - since most molecular gas is not collapsing we investigate equilibrium of forces under which clouds can last over long period
 \subsection{Equilibrium of thermal pressure and self-gravity} isothermal first approximation for dense core. Lane-Eden equation: gravitatonal stability and critical lenght scale using isothermal Lane-Emden model (for stable cloud increases of $P_0$ causes increase of internal pressure: clouds of low density constrast are confined by external pressure, all clouds with $\frac{\rho}{\rho_c}14.$ at right of first maximum are gravitationally unstable - $M_{BE}=\frac{m_1a_T^4}{P_0\expy{1/2}G\expy{3/2}}$). Jeans classics analysis of self-graviting waves propagating through uniform medium: $\lambda_J=\sqrt{\frac{\pi c_s^2}{G\rho_0}}$ - dense core/Bok globe are close to Instability
 \subsection{rotation support}
 Dense cores have measured rotation rate (\SI{1.27}{\cm} line of $NH_3$ and others - ch3), and gradient in radial velocity from CO mapping of GMC. Cyl symm-sys specific AM about z $j=ou_{\phi}=r\sin\theta u_{\phi}$: centrifugal force per unit mass $j^2/o^3$ which have to be balanced in EOM, centrifugal potential $\Phi_{cen}=-\int_0^oj^2/o^3\,do$ so we can extendend the non rotating case. Numerical methods: trial density.
-\subsection{MHD equations}
+\section{MHD equations}
 As we go from lower to higher density object $M$, $T$, $W$ becomes comparable while observed $B_{\parallel}$ increases: flux freezing - magnetic field lines tethered to the gas - MHD equations:
 \begin{align*}
 &\nabla\wedge\vec{B}=\frac{4\pi}{c}\vec{j}\\
@@ -57,16 +56,49 @@ For conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{
 &f'_{in}=-nm_n\exv{\sigma_{in}u_i'}\vec{u}_i'
 \end{align*}
 drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$: \[\sigma=\frac{n_ee^2}{n}[\frac{1}{\exv{\sigma_{en}u_e'}m_e}+\frac{1}{\exv{\sigma_{in}u_i'}m_n}]\] in molecular clouds of solar composition $\exv{\sigma_{en}u_e'}\approx\SI{1.0e-7}{\cubic\cm\per\second}$, $\exv{\sigma_{in}u_i'}\approx\SI{1.5e-9}{\cubic\cm\per\second}$ so timescale for ohmic dissipation for clump within GMC $L\approx\SI{1}{\parsec}$, $n\approx\SI{e3}{\per\cubic\cm}$: $\sigma L^2/c^2\approx\SI{e17}{\year}$.
-
 \subsection{Flux freezing}
 \begin{itemize}
 \item Induction equation: Faraday $\vecp{\nabla}{E}=-\PDy{t}{\vec{B}}$, Ampere $\vecp{\nabla}{B}=\mu_0\vec{j}$ and Ohm $\vec{E}+\vecp{v}{B}=\vec{j}/\sigma$ law where $\vec{v}$ is the velocity of the field hence $\TDy{t}{\vec{B}}=\eta\nabla^2\vec{B}+\nabla\wedge(\vecp{v}{B})$. \keyword{Magnetic Reynolds number}: $\eta\nabla^2\vec{B}\approx\frac{\eta B}{L^2}$, $\nabla\wedge(\vecp{v}{B})\approx\frac{VB}{L}$ whose ratio is $R_m=\frac{LV}{\eta}$
 \item Infinite conductivity ($\eta\to0$). Change of magnetic flux over time: first term due to change of B with time, second due to change of integral region due to gas motion ($d\vec{S}=\vec{v}\wedge d\vec{s}$), then using Stokes' theorem ($\int\nabla\wedge\vec{A}=\int\vec{A}\cdot d\vec{s}$)
 \begin{align*}
-&\TDy{t}{\Phi_B}=\TDof{t}\int\vec{B}\cdot d\vec{S}=\int_S\PDy{t}{\vec{B}}\cdot d\vec{S}+\oint_{C}\vec{B}\cdot\vec{v}\wedge d\vec{l}\\
-&\TDy{t}{\Phi_B}=\int[\PDy{t}{\vec{B}}-\nabla(\vecp{v}{B})]\cdot d\vec{S}=0
+&\TDy{t}{\Phi_B}=\TDof{t}\int\vec{B}\cdot d\vec{S}=\int_S\PDy{t}{\vec{B}}\cdot d\vec{S}\\
+&+\oint_{C}\vec{B}\cdot\vec{v}\wedge d\vec{l}\\
+&\TDy{t}{\Phi_B}=\int[\PDy{t}{\vec{B}}-\nabla(\vecp{v}{B})]\cdot d\vec{S}\\
+&=0=\int_C[\vecp{u}{B}\cdot d\vec{s}-\vec{B}\cdot(d\vec{s}\wedge\vec{u})]
 \end{align*}
-
+Flux freezing: magnetic field is tied to motion of the fluid/gas constrained by field configuration: $M$ and $T$ are comparable in most clouds
 \end{itemize}
+\subsection{Ideal MHD breakdown}
+If $1\msun$ sphere within dense core with $n_{H_2}=\SI{e4}{\per\cubic\cm}$ and $R_0=\SI{0.07}{\parsec}$ is threaded by uniform magnetic field of strenght $B_0\approx\SI{30}{\micro\gauss}$: while this sphere becomes a T-Tauri the radius becomes $R_1\approx5\rsun=\SI{3e11}{\cm}$ in case of flux freezing $BR^2$ remains constant leading to $B_1$ four order magnitude greater than observed.
+\begin{itemize}
+\item Ambipolar diffusion: neutral species slip past and contraction proceed
+\item Entanglement of field can lead to strong Ohmic dissipation through magnetic reconnection (magnetic topology is re-arranged and magnetic energy is converted to kinetic/thermal energy and particle accel.)
+\end{itemize}
+\section{Magneto-static configuration}
+\subsection{Analogy with rotating structures}
+Freezing of field lines during contraction suggest similarity between magnetic equilibrium structure and rotating non magnetic structure: internal distro of magnetic flux is inherited from earlier more rarefied environment just as the run of specific angular momentum - consider condensation from configuration of uniform straight magnetic field along z $\vec{B}_0$ so matter can slide along field until stopped by thermal pressure gas moving orthogonally is retarded by pressure and magnetic tension (bending of field lines)
+\subsection{Magnetized collapse equilibrium: equations for magnetic flux and gravitational potential}
+\begin{align*}
+&0=-c_s^2\nabla\rho-\rho\nabla\phi_g+\frac{\vec{j}}{c}\wedge\vec{B}
+\end{align*}
+B is poloidal (lies in $\varpi-z$ plane) then ampere law implies $\vec{j}$ is toroidal (pointing in $\phi$ direction): magnetic force per unit volume has components along $\varpi$ and $z$. The problem is solved in magnetic flux contained within surface generated by rotating any field line about the axis $\Phi_B$, and $\Phi_g$:
+\begin{align*}
+&\Phi_B=\int_S(\nabla\wedge\vec{A})d^2x=2\pi\varpi A_{\phi}\\
+&\vec{B}=-\frac{\hat{e}_{\phi}}{2\pi\varpi}\wedge\nabla\Phi_B
+\end{align*}
+where we've used Stokes' ($\oint_{\Gamma}\vec{F}\cdot d\vec{F}=\int_S\nabla\wedge\vec{F}\cdot d\vec{S}$); so $\Phi_B$ don't varies along field line, hydro-balance means $\rho\exp{\Phi_g/c_s^2}$ is conserved along field lines; after some manipulation force balance reduces to
+\begin{align*}
+&\frac{j_{\phi}}{2\pi\varpi c}=\TDy{\Phi_B}{q}\exp{-\Phi_g/c_s^2}\\
+&q=c_s^2\rho\exp{\Phi_g/c_s^2}
+\end{align*}
+Numerical calculation is needed to solve field equations for $\Phi_B$, $\Phi_g$ and relation $q(\Phi_B)$
+\subsection{Critical mass}
+Models variing nondimensional cloud mass with fixed $\xi_0=\sqrt{\frac{4\pi G\rho_0}{c_s^2}}R_0$ non dimensional radius and magnetic to thermal pressure ratio $\alpha=\frac{B_0^2}{8\pi P_0}$:
+\begin{align*}
+&m_c\approx1.2+0.15\alpha\expy{1/2}\xi_0^2\\
+&M_c\approx M_{BE}+M_{\Phi}\\
+&M_{\Phi}=0.12\frac{\Phi_{cl}}{G^{1/2}}
+\end{align*}
+For $M_{BE}\ll M_{\Phi}$ all equilibrium configuration resemble flat slab: stability for $M<M_{\Phi}$ - $\frac{\Sigma_c}{B_c}<0.17G^{-1/2}$ - consider a slab $\Sigma_0$ with orthogonal $B_0$, un cerchio di raggio $\varpi$ racchiude una massa $\pi\Sigma_0\varpi_0^2$ dopo una contrazione frazionale $\epsilon$ la forza gravitazionale addizionale per unit\'a di massa al bordo del cerchio \'e $F_G\approx2\pi\epsilon G\Sigma_0\varpi_0^2/\varpi_0^2$ e in direzione opposta la tensione magnetico determina una forza per unit\'a di massa $F_B=J\frac{B_z}{c\Sigma_0}$ where $J=c|B_{\varpi}|/2\pi$ is the volume density current integrated over thickness, which is due to bending of field lines and flow azimuthally (leggi $\hat{\phi}$?) and $B_{\varpi}$ is small radial component generated by contraction - assuming very low density outside the slab $\nabla\wedge\vec{B}=0$, if $\Delta z$ is the height above which field relax to its straight configuration we have $B_{\varpi}\approx2\epsilon B_0(\Delta z/\varpi)$, since as result of flux freezing $B_z$ at disk center increases by $2\epsilon B_0$ it's $B_{\varpi}\approx2\epsilon B_0(\Delta z/\varpi)$ on the other end $\nabla\cdot\vec{B}=0$  and so $\Delta z\approx\varpi$ and $B_{\varpi}\approx2\epsilon B_0$: magnetic tension to exceed gravity $F_B>F_G$ or $(\Sigma_0/B_0)^2<1/(2\pi^2G)$ (ok within factor 2).
 
 \end{document}
